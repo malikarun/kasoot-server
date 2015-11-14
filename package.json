@@ -1,0 +1,14 @@
+{
+  "name": "kasoot-server",
+  "version": "1.0.0",
+  "description": "Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "binaryjs": "^0.2.1"
+  }
+}
