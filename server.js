@@ -4,7 +4,7 @@ var BinaryServer = require('binaryjs').BinaryServer;
 var http = require("http");
 var express = require("express");
 var app = express();
-var port = process.env.PORT || 9001;
+var port = process.env.PORT || 9000;
 
 app.use(express.static(__dirname + "/"));
 
@@ -12,8 +12,8 @@ var server = http.createServer(app);
 server.listen(port);
 
 // Serve client side statically
-var binaryServer = BinaryServer({ port: 9000 });
-
+var binaryServer = BinaryServer({ server: server });
+// console.log(binaryServer._server.options.server);
 // wait for new user connections
 var currentSong;
 binaryServer.on('connection', function(client) {

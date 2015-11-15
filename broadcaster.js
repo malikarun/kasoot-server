@@ -1,5 +1,6 @@
 window.onload = function(){
-  var client = new BinaryClient('wss://kasoot.herokuapp.com:9000');
+  var host = location.origin.replace(/^http/, 'ws')
+  var client = new BinaryClient(host);
 
   document.querySelector('input[type=file]').onchange = function(event) {
     var file = event.target.files[0];
